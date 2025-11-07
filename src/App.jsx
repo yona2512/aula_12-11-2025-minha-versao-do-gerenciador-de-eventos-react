@@ -11,14 +11,7 @@ function App() { /* cria função app */
     <Router> {/* habilita o uso das rotas */}
       <div className="app"> {/* abre uma classe para o CSS */}
         <Header /> {/* renderiza o cabeçalho do app */}
-
-
-        {/* Menu de navegação */}
-        <nav> 
-          <Link to="/">Início</Link> | <Link to="/sobre">Sobre</Link>  {/* Levam para suas páginas */}
-        </nav> 
-
-
+         
         {/* Definição das rotas */}
         <Routes> {/* define o que será mostrado em cada link */}
           <Route path="/" element={<Home />} /> 
@@ -26,6 +19,7 @@ function App() { /* cria função app */
         </Routes> 
 
         <Footer /> {/* renderiza o rodapé */}
+        
       </div> {/* fecha div */}
     </Router> /* fecha Router */
   ); /*fecha return*/
