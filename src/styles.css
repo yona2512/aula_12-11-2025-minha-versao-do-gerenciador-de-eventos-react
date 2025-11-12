@@ -26,26 +26,7 @@ body {
   align-items: center;     /* Centraliza verticalmente (eixo transversal) */
   padding-bottom: 80px;      /* Espaço reservado para o rodapé fixo */
   
-  
-  div {
-
-    width: 50%; /* Ou outra largura/max-width */
-    margin: 0 auto; /* Define margens esquerda e direita automáticas */
-    background-color: rgb(219, 76, 255);
-    transition: width 2s, height 2s, background-color 2s, transform 2s;
-    align-items: center; 
-    margin: 5px; 
-  }
-  
-  div:hover {
-      
-    width: 300px;
-    height: 300px;
-    background-color: rgb(255, 225, 94);  
-    transform: rotate(360deg);
-    align-items: center; 
-    
-  }
+ 
 }
 
 /* ===============================
@@ -147,3 +128,34 @@ footer {
   font-weight: bold;                  /* Texto em negrito */
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Sombra abaixo do cabeçalho */
 }
+
+/* ===============================
+   LISTA DE EVENTOS (HOME)
+   =============================== */
+
+   .eventos {
+    display: flex;             /* Deixa os eventos lado a lado */
+    justify-content: center;   /* Centraliza horizontalmente */
+    align-items: flex-start;   /* Alinha pelo topo */
+    flex-wrap: wrap;           /* Quebra linha se faltar espaço */
+    gap: 20px;                 /* Espaço entre os cards */
+    margin-top: 30px;
+  }
+  
+  /* Estilo individual de cada evento */
+  .evento {
+    background-color: #e35aff;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+  }
+  
+  .evento:hover {
+    transform: scale(1.05);
+    background-color: #d155ff;
+  }
+  

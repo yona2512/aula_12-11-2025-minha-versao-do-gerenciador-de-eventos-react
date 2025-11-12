@@ -1,7 +1,6 @@
 function Evento({ nome, data, local }) {
   return (
-    <div>
-      
+    <div className="evento">
       <h3>{nome}</h3>
       {/* Exibe o nome do evento a partir dos dados recebidos via props */}
       <p>Data: {data}</p>

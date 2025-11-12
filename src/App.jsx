@@ -11,7 +11,7 @@ function App() { /* cria função app */
     <Router> {/* habilita o uso das rotas */}
       <div className="app"> {/* abre uma classe para o CSS */}
         <Header /> {/* renderiza o cabeçalho do app */}
-         
+
         {/* Definição das rotas */}
         <Routes> {/* define o que será mostrado em cada link */}
           <Route path="/" element={<Home />} /> 
