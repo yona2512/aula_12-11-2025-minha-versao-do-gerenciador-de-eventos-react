@@ -1,0 +1,161 @@
+/* ===============================
+   ESTILOS GERAIS DO PROJETO
+   =============================== */
+
+/* Aplica configurações básicas a toda a página */
+* {
+  margin: 0;              /* Remove margens padrão do navegador */
+  padding: 0;             /* Remove espaçamentos padrão */
+  box-sizing: border-box; /* Mantém largura total incluindo bordas e preenchimentos */
+}
+
+/* Define as cores, fonte e alinhamento geral */
+body {
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(to top, rgb(213, 121, 255), rgb(255, 244, 145)); /* Fundo cinza-claro */
+  color: #333;               /* Cor principal do texto */
+  text-align: center;        /* Centraliza textos genéricos */
+  min-height: 100vh;         /* Garante altura mínima de tela cheia */
+}
+
+/* Container principal da aplicação */
+.app {
+  display: flex;             /* Usa flexbox para organização vertical */
+  flex-direction: column;    /* Elementos empilhados (de cima para baixo) */
+  justify-content: center; /* Centraliza horizontalmente (eixo principal) */
+  align-items: center;     /* Centraliza verticalmente (eixo transversal) */
+  padding-bottom: 80px;      /* Espaço reservado para o rodapé fixo */
+  
+ 
+}
+
+/* ===============================
+   CABEÇALHO (HEADER)
+   =============================== */
+
+header {
+  width: 100%;                        /* Ocupa toda a largura */
+  background-color: #aa71c0;          /* Azul padrão SENAI */
+  color: rgb(0, 0, 0);                       /* Texto branco */
+  padding: 20px 0;                    /* Espaçamento interno */
+  font-size: 1.6em;                   /* Tamanho de texto maior */
+  font-weight: bold;                  /* Texto em negrito */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Sombra abaixo do cabeçalho */
+}
+
+/* Estilo do menu principal de navegação */
+.menu-principal {
+  margin-top: 10px;
+}
+
+.menu-principal a {
+  color: #ff8800;           /* Azul escuro para links */
+  text-decoration: none;    /* Remove o sublinhado */
+  margin: 0 10px;           /* Espaçamento lateral */
+  font-weight: 500;         /* Leve destaque */
+}
+
+.menu-principal a:hover {
+  text-decoration: underline; /* Sublinha ao passar o mouse */
+}
+
+/* ===============================
+   CONTEÚDO PRINCIPAL
+   =============================== */
+
+main {
+  margin-top: 30px;
+  width: 90%;
+  max-width: 900px;
+}
+
+/* Título principal das páginas */
+h1 {
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+/* Parágrafos genéricos */
+p {
+  color: #000000;
+  line-height: 1.5; /* Espaçamento entre linhas */
+  
+
+}
+
+
+/* ===============================
+   BOTÕES
+   =============================== */
+
+button,
+.btn {
+  background-color: #ffbf6b;       /* Azul padrão */
+  color: white;                    /* Texto branco */
+  border: none;                    /* Remove bordas padrão */
+  padding: 10px 20px;              /* Espaçamento interno */
+  border-radius: 6px;              /* Cantos arredondados */
+  margin: 5px;                     /* Espaçamento entre botões */
+  cursor: pointer;                 /* Mãozinha ao passar o mouse */
+  font-size: 1em;                  /* Tamanho padrão */
+  transition: background-color 0.3s ease; /* Transição suave no hover */
+}
+
+button:hover,
+.btn:hover {
+  background-color: #ffad7e;       /* Azul mais escuro ao passar o mouse */
+}
+
+/* ===============================
+   CARDS DE EVENTOS
+   =============================== */
+
+.card-evento {
+  background-color: white;               /* Fundo branco */
+  border-radius: 10px;                   /* Cantos arredondados */
+  padding: 20px;
+
+}
+
+footer {
+  position: fixed; 
+  bottom: 0;
+  width: 100%;                        /* Ocupa toda a largura */
+  background-color: #aa71c0;          /* Azul padrão SENAI */
+  color: white;                       /* Texto branco */
+  padding: 20px 0;                    /* Espaçamento interno */
+  font-size: 0.8em;                   /* Tamanho de texto maior */
+  font-weight: bold;                  /* Texto em negrito */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Sombra abaixo do cabeçalho */
+}
+
+/* ===============================
+   LISTA DE EVENTOS (HOME)
+   =============================== */
+
+   .eventos {
+    display: flex;             /* Deixa os eventos lado a lado */
+    justify-content: center;   /* Centraliza horizontalmente */
+    align-items: flex-start;   /* Alinha pelo topo */
+    flex-wrap: wrap;           /* Quebra linha se faltar espaço */
+    gap: 20px;                 /* Espaço entre os cards */
+    margin-top: 30px;
+  }
+  
+  /* Estilo individual de cada evento */
+  .evento {
+    background-color: #e35aff;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+  }
+  
+  .evento:hover {
+    transform: scale(1.05);
+    background-color: #d155ff;
+  }
+  
