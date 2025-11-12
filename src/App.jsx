@@ -1,10 +1,11 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"; 
-import Header from "./componentes/Header"; /* importa o cabeçalho */
-import Footer from "./componentes/Footer"; /* importa o rodapé */
+import Header from "./Header/Header"; /* importa o cabeçalho */
+import Footer from "./Footer/Footer"; /* importa o rodapé */
 import Home from "./paginas/Home"; /* importa os componentes da pagina */
 import Sobre from "./paginas/Sobre"; /* importa os componentes da pagina */
 import "./styles.css"; /* importa arquivo CSS */
-
+import "./Header/header.css";
+import "./Footer/footer.css";
 
 function App() { /* cria função app */
   return ( /* diz que Vai retornar */
