@@ -147,29 +147,49 @@ button:hover,
     background-color: #d155ff;
   }
   
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* evita scroll lateral */
+  }
+  
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
   .faixa-imagens {
     width: 100%;
     overflow: hidden;
-    height: 100px;
+    height: 300px;
     margin-top: 20px;
+    position: relative;
   }
   
   .container-imagens {
     display: flex;
-    animation: deslizar 20s linear infinite;
+    animation: deslizar 60s linear infinite;
   }
   
   .container-imagens img {
-    height: 100px;
+    height: 250px;
     margin-right: 20px;
+    flex-shrink: 0;
   }
   
   @keyframes deslizar {
     0% {
-      transform: translateX(100%);
+      transform: translateX(0);
     }
     100% {
-      transform: translateX(-100%);
+      transform: translateX(-50%);
     }
   }
   
