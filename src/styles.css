@@ -16,7 +16,12 @@ body {
   color: #333;               /* Cor principal do texto */
   text-align: center;        /* Centraliza textos genéricos */
   min-height: 100vh;         /* Garante altura mínima de tela cheia */
+  
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: center; 
 }
+
 
 /* Container principal da aplicação */
 .app {
@@ -25,9 +30,10 @@ body {
   justify-content: center; /* Centraliza horizontalmente (eixo principal) */
   align-items: center;     /* Centraliza verticalmente (eixo transversal) */
   padding-bottom: 80px;      /* Espaço reservado para o rodapé fixo */
+  }
   
  
-}
+
 
 /* ===============================
    CABEÇALHO (HEADER)
@@ -139,5 +145,31 @@ button:hover,
   .evento:hover {
     transform: scale(1.05);
     background-color: #d155ff;
+  }
+  
+  .faixa-imagens {
+    width: 100%;
+    overflow: hidden;
+    height: 100px;
+    margin-top: 20px;
+  }
+  
+  .container-imagens {
+    display: flex;
+    animation: deslizar 20s linear infinite;
+  }
+  
+  .container-imagens img {
+    height: 100px;
+    margin-right: 20px;
+  }
+  
+  @keyframes deslizar {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
   

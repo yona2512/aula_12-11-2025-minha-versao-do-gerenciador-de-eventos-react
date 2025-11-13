@@ -7,6 +7,8 @@ import "./styles.css"; /* importa arquivo CSS */
 import "./Header/header.css";
 import "./Footer/footer.css";
 
+
+
 function App() { /* cria função app */
   return ( /* diz que Vai retornar */
     <Router> {/* habilita o uso das rotas */}
