@@ -3,7 +3,9 @@ function Imagens() {
     "https://www.omnieventos.com/wp-content/uploads/2018/06/eventos-corporativos.jpg",
     "https://media.gazetadopovo.com.br/2024/03/27110327/grupo-amigos-comer-em-restaurante-960x540.jpg",
     "https://cdn.atletis.com.br/atletis-website/base/b0a/2e6/fd6/principais-eventos-esportivos-brasil.jpg",
-    "https://www.findup.com.br/wp-content/uploads/2024/02/Prancheta-1.png"
+    "https://www.findup.com.br/wp-content/uploads/2024/02/Prancheta-1.png",
+    "https://www.ceara.gov.br/wp-content/uploads/2019/08/190528_SEM-MAIS-INFANCIA_ARI2055.jpg",
+    "https://img.freepik.com/fotos-premium/feliz-natal-e-feliz-ano-novo-feliz-familia-esta-a-espera-do-ano-novo_938508-7521.jpg?semt=ais_hybrid&w=740&q=80"
   ];
 
   const imagensDuplicadas = [...imagens, ...imagens];

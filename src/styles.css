@@ -16,10 +16,7 @@ body {
   color: #333;               /* Cor principal do texto */
   text-align: center;        /* Centraliza textos genéricos */
   min-height: 100vh;         /* Garante altura mínima de tela cheia */
-  
-  background-repeat: no-repeat;
-  background-size: cover; 
-  background-position: center; 
+
 }
 
 
@@ -153,18 +150,6 @@ button:hover,
     overflow-x: hidden; /* evita scroll lateral */
   }
   
-  body, html {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
-  
-  body, html {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
-  
   .faixa-imagens {
     width: 100%;
     overflow: hidden;
@@ -182,6 +167,7 @@ button:hover,
     height: 250px;
     margin-right: 20px;
     flex-shrink: 0;
+    border-radius: 10px;
   }
   
   @keyframes deslizar {
