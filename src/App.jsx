@@ -6,7 +6,7 @@ import Sobre from "./paginas/Sobre"; /* importa os componentes da pagina */
 import "./styles.css"; /* importa arquivo CSS */
 import "./Header/header.css";
 import "./Footer/footer.css";
-
+import CadastroEvento from "./paginas/CadastroEvento"; /* importa os componentes da pagina */
 
 
 function App() { /* cria função app */
@@ -19,6 +19,7 @@ function App() { /* cria função app */
         <Routes> {/* define o que será mostrado em cada link */}
           <Route path="/" element={<Home />} /> 
           <Route path="/sobre" element={<Sobre />} /> 
+          <Route path="/CadastroEvento" element={<CadastroEvento />} /> 
         </Routes> 
 
         <Footer /> {/* renderiza o rodapé */}

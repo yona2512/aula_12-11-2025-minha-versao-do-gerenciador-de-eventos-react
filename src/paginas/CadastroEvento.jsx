@@ -30,7 +30,7 @@ function CadastroEvento({ onCadastrar }) {
     }
 
     return (
-        <div classname="cadastroEvento-container">
+        <div className="cadastroEvento-container">
             <h2>Cadastrar Evento</h2>
 
             <form onSubmit={Enviar} className="form-evento">
