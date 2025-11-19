@@ -7,12 +7,13 @@
   margin: 0;              /* Remove margens padrão do navegador */
   padding: 0;             /* Remove espaçamentos padrão */
   box-sizing: border-box; /* Mantém largura total incluindo bordas e preenchimentos */
+  
 }
 
 /* Define as cores, fonte e alinhamento geral */
 body {
   font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
-  background-image: linear-gradient(to top, rgb(213, 121, 255), rgb(255, 244, 145)); /* Fundo cinza-claro */
+  background-image: linear-gradient(to top, rgb(213, 121, 255), rgb(255, 244, 145)); /* Fundo gradiante */
   color: #333;               /* Cor principal do texto */
   text-align: center;        /* Centraliza textos genéricos */
   min-height: 100vh;         /* Garante altura mínima de tela cheia */
@@ -27,6 +28,7 @@ body {
   justify-content: center; /* Centraliza horizontalmente (eixo principal) */
   align-items: center;     /* Centraliza verticalmente (eixo transversal) */
   padding-bottom: 80px;      /* Espaço reservado para o rodapé fixo */
+  
   }
   
  
@@ -41,6 +43,7 @@ body {
 /* Estilo do menu principal de navegação */
 .menu-principal {
   margin-top: 10px;
+  
 }
 
 .menu-principal a {
@@ -182,80 +185,3 @@ button:hover,
     }
   }
   
-/*Cadastro Eventos, botões*/
-
-/* Container principal */
-.cadastroEvento-container {
-  max-width: 500px;
-  margin: 40px auto;        /* centraliza na tela */
-  padding: 20px;
-  background-image: linear-gradient(to top, rgb(213, 121, 255), rgb(255, 244, 145)); /* Fundo cinza-claro */
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Título */
-.cadastroEvento-container h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-/* Formulário */
-.form-evento {
-  display: flex;
-  flex-direction: column;
-  gap: 15px; /* espaçamento entre os campos */
-}
-
-/* Labels */
-.form-evento label {
-  font-weight: bold;
-  color: #555;
-}
-
-/* Inputs */
-.form-evento input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 14px;
-  transition: border-color 0.3s;
-}
-
-.form-evento input:focus {
-  border-color: #007bff;
-  outline: none;
-}
-
-/* Botão salvar */
-.btn-salvar {
-  padding: 12px;
-  background-color: #dd6cff;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 15px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.btn-salvar:hover {
-  background-color: #0056b3;
-}
-
-/* Botão voltar */
-.btn-voltar {
-  padding: 12px;
-  background-color: #6c757d;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 15px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.btn-voltar:hover {
-  background-color: #5a6268;
-}
