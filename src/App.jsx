@@ -6,6 +6,9 @@ import Sobre from "./paginas/Sobre"; /* importa os componentes da pagina */
 import "./styles.css"; /* importa arquivo CSS */
 import "./Header/header.css";
 import "./Footer/footer.css";
+import "./paginas/modal.css";
+import './cadastroEventos.css';
+
 import CadastroEvento from "./paginas/CadastroEvento"; /* importa os componentes da pagina */
 
 
