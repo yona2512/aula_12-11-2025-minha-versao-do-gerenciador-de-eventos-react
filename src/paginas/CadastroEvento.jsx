@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./cadastroEventos.css";
 import{useNavigate} from "react-router-dom";//adicionado
-
+import Modal from "../componentes/Modal"; // importe o modal
 
 function CadastroEvento({ onCadastrar }) {
     //Estados dos campos do formulário
