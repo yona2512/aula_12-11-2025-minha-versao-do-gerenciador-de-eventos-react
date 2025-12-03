@@ -1,0 +1,29 @@
+/* Carrossel ocupa um tamanho fixo (ajuste aqui o valor desejado) */
+.carrossel {
+  width: 100%;
+  height: 300px;          /* ajuste para o tamanho exato do espaço vermelho */
+  position: relative;
+  overflow: hidden;
+  background: #00000010;  /* opcional: fundo para visualizar área */
+}
+
+/* Garante que qualquer conteúdo dentro ocupe toda a área */
+.carrossel > * {
+  position: absolute;
+  inset: 0;               /* top/right/bottom/left: 0 */
+}
+
+/* Imagens preenchem sem distorcer (corta o excesso) */
+.carrossel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* use 'contain' se não quiser corte */
+  display: block;          /* evita gaps por inline images */
+  max-width: none;         /* neutraliza Bootstrap e afins */
+}
+
+/* Se houver frameworks sobrescrevendo, use !important como último recurso */
+/*
+.carrossel { height: 300px !important; }
+.carrossel img { object-fit: cover !important; }
+*/

@@ -68,13 +68,13 @@ main {
 }
 
 /* Título principal das páginas */
-h1 {
+h2 {
   color: #000000;
-  margin-bottom: 20px;
+  margin-bottom: 2px;
 }
 
 /* Parágrafos genéricos */
-p {
+h2 {
   color: #000000;
   line-height: 1.5; /* Espaçamento entre linhas */
   
@@ -105,54 +105,7 @@ button:hover,
   background-color: #ffad7e;       /* Azul mais escuro ao passar o mouse */
 }
 
-/* ===============================
-   CARDS DE EVENTOS
-   =============================== */
 
-.card-evento {
-  background-color: white;               /* Fundo branco */
-  border-radius: 10px;                   /* Cantos arredondados */
-  padding: 20px;
-
-}
-
-
-
-/* ===============================
-   LISTA DE EVENTOS (HOME)
-   =============================== */
-
-   .eventos {
-    display: flex;             /* Deixa os eventos lado a lado */
-    justify-content: center;   /* Centraliza horizontalmente */
-    align-items: flex-start;   /* Alinha pelo topo */
-    flex-wrap: wrap;           /* Quebra linha se faltar espaço */
-    gap: 20px;                 /* Espaço entre os cards */
-    margin-top: 30px;
-  }
-  
-  /* Estilo individual de cada evento */
-  .evento {
-    background-color: #e35aff;
-    color: black;
-    padding: 20px;
-    border-radius: 10px;
-    width: 200px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    transition: transform 0.2s ease, background-color 0.3s ease;
-  }
-  
-  .evento:hover {
-    transform: scale(1.05);
-    background-color: #d155ff;
-  }
-  
-  body, html {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* evita scroll lateral */
-  }
   
   .faixa-imagens {
     width: 100%;

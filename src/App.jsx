@@ -1,35 +1,30 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./Header/Header"; /* importa o cabeçalho */
-import Footer from "./Footer/Footer"; /* importa o rodapé */
-import Home from "./paginas/Home"; /* importa os componentes da pagina */
-import Sobre from "./paginas/Sobre"; /* importa os componentes da pagina */
-import "./styles.css"; /* importa arquivo CSS */
+import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
+import Home from "./paginas/Home";
+import Sobre from "./paginas/Sobre";
+import "./styles.css";
 import "./Header/header.css";
 import "./Footer/footer.css";
-import "./paginas/modal.css";
-import './cadastroEventos.css';
-
-import CadastroEvento from "./paginas/CadastroEvento"; /* importa os componentes da pagina */
+import "./paginas/cadastroEventos.css";   // ajuste conforme o nome real
 
 
-function App() { /* cria função app */
-  return ( /* diz que Vai retornar */
-    <Router> {/* habilita o uso das rotas */}
-      <div className="app"> {/* abre uma classe para o CSS */}
-        <Header /> {/* renderiza o cabeçalho do app */}
+import CadastroEvento from "./paginas/CadastroEvento";
 
-        {/* Definição das rotas */}
-        <Routes> {/* define o que será mostrado em cada link */}
+function App() {
+  return (
+    <Router>
+      <div className="app">
+        <Header />   {/* 1 - Header */}
+        <Routes>
           <Route path="/" element={<Home />} /> 
           <Route path="/sobre" element={<Sobre />} /> 
           <Route path="/CadastroEvento" element={<CadastroEvento />} /> 
-        </Routes> 
+        </Routes>
+        <Footer />   {/* 4 - Footer */}
+      </div>
+    </Router>
+  );
+}
 
-        <Footer /> {/* renderiza o rodapé */}
-        
-      </div> {/* fecha div */}
-    </Router> /* fecha Router */
-  ); /*fecha return*/
-} /* fecha função */
-
-export default App; /* exporta o componente app */
+export default App;

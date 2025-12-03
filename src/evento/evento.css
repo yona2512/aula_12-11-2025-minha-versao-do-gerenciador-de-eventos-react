@@ -1,0 +1,10 @@
+.evento {
+    background-color: #cc27ff; /* roxo */
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    border-radius: 8px;
+    width: 200px; /* largura fixa para alinhar */
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+  

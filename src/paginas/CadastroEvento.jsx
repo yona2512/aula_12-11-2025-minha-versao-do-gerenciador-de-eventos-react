@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./CadastroEvento.css"; // Certifique-se de que esse arquivo existe
+import "./cadastroEventos.css";
+
 
 function CadastroEvento({ onCadastrar }) {
   const [nome, setNome] = useState("");

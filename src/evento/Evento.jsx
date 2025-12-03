@@ -1,3 +1,4 @@
+import "./evento.css";
 function Evento({ nome, data, local }) {
   return (
     <div className="evento">

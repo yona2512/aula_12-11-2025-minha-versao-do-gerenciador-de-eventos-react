@@ -1,46 +1,40 @@
-import Evento from "../componentes/Evento";
+import Carrosel from "../componentes/Carrosel";
+import Evento from "../evento/Evento";
+import "./home.css";
 
 function Home({ eventos }) {
   return (
-    <main>
+    <main className="home-container">
       <h1>Bem-vindo ao Gerenciador de Eventos</h1>
-      <p>Aqui você fica por dentro dos eventos</p>
-      <p>Eventos cadastrados:</p>
+      <h2>Aqui você fica por dentro dos eventos</h2>
+      <h2>Eventos cadastrados:</h2>
 
-      {/* Eventos fixos */}
-      <Evento nome="Mundo Senai" 
-      data="05/11/2025" 
-      local="Auditório" />
-      <Evento nome="Passeio didático"
-       data="25/10/2025" 
-       local="Floresta do Chapecó" />
-      <Evento nome="EFAPI"
-       data="17/10/2025"
-        local="EFAPI" />
-      <Evento nome="Mundo SENAI" 
-      data="15/11/2025"
-       local="Auditório" />
-      <Evento nome="Volta das férias" 
-      data="02/12/2025" 
-      local="EEB Tancredo de Almeida Neves" />
-      <Evento nome="Publicação do Novo capítulo de TADC" 
-      data="12/12/2025"
-       local="YouTube" />
+      {/* Container horizontal para os eventos */}
+      <div className="eventos-container">
+        <Evento nome="Aniversario" data="25/12/2025" local="casa" />
+        <Evento nome="Mundo SENAI" data="15/11/2025" local="Auditório" />
+        <Evento nome="Férias" data="12/12/2025" local="casa" />
+      </div>
 
       {/* Eventos dinâmicos */}
       {eventos && eventos.length > 0 && (
         <>
           <h3>Eventos adicionados pelo usuário:</h3>
-          {eventos.map((evento) => (
-            <Evento
-              key={evento.id}
-              nome={evento.nome}
-              data={evento.data}
-              local={evento.local}
-            />
-          ))}
+          <div className="eventos-container">
+            {eventos.map((evento) => (
+              <Evento
+                key={evento.id}
+                nome={evento.nome}
+                data={evento.data}
+                local={evento.local}
+              />
+            ))}
+          </div>
         </>
       )}
+
+      {/* Carrossel vem depois dos eventos */}
+      <Carrosel />
     </main>
   );
 }
