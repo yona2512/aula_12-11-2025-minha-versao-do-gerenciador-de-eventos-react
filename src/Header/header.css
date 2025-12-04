@@ -1,9 +1,31 @@
 header {
-    width: 100%;                        /* Ocupa toda a largura */
-    background-color: #aa71c0;          /* Azul padrão SENAI */
-    color: rgb(0, 0, 0);                       /* Texto branco */
-    padding: 20px 0;                    /* Espaçamento interno */
-    font-size: 1.6em;                   /* Tamanho de texto maior */
-    font-weight: bold;                  /* Texto em negrito */
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Sombra abaixo do cabeçalho */
-  }
+  position: fixed;                     
+  top: 0;                              
+  left: 0;                             
+  width: 100%;                         
+  background-color: #aa71c0;         
+  color: black;                        
+  padding: 0px 0;     /* antes: 20px → deixa menor */
+  font-size: 1.2em;    /* antes: 1.6em → menos alto */                   
+  font-weight: bold;                  
+  text-align: center;                 
+  letter-spacing: 0.5px;              
+    
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;                      
+}
+
+/* Aumenta o tamanho das letras do menu */
+header nav a {
+  font-size: 1.2em;
+  margin: 0 10px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+header nav a:hover {
+  opacity: 0.8;
+}
+
+  

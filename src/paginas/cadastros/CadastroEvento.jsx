@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./cadastroEventos.css";
 
-
 function CadastroEvento({ onCadastrar }) {
   const [nome, setNome] = useState("");
   const [data, setData] = useState("");
   const [local, setLocal] = useState("");
-  const [showModal, setShowModal] = useState(false);
+  const [alertVisible, setAlertVisible] = useState(false);
   const [eventoSalvo, setEventoSalvo] = useState(null);
+
   const navigate = useNavigate();
 
   function Enviar(e) {
@@ -21,18 +21,27 @@ function CadastroEvento({ onCadastrar }) {
       local,
     };
 
-    onCadastrar(novoEvento);
+    if (onCadastrar) {
+      onCadastrar(novoEvento);
+    }
+
     setEventoSalvo(novoEvento);
-    setShowModal(true);
+    setAlertVisible(true);
 
     setNome("");
     setData("");
     setLocal("");
+
+    // fecha sozinho depois de 3 segundos
+    setTimeout(() => {
+      setAlertVisible(false);
+    }, 3000);
   }
 
   return (
     <div className="cadastroEvento-container">
       <h2>Cadastrar Evento</h2>
+
       <form onSubmit={Enviar} className="form-evento">
         <label>Título do Evento:</label>
         <input
@@ -60,22 +69,22 @@ function CadastroEvento({ onCadastrar }) {
 
         <div className="botoes">
           <button type="submit" className="btn-salvar">Salvar Evento</button>
-          <button type="button" className="btn-voltar" onClick={() => navigate("/")}>
+          <button 
+            type="button" 
+            className="btn-voltar" 
+            onClick={() => navigate("/")}
+          >
             Voltar
           </button>
         </div>
       </form>
 
-      {/* Modal de confirmação */}
-      {showModal && eventoSalvo && (
-        <div className="modal-overlay" onClick={() => setShowModal(false)}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <h3>Evento cadastrado com sucesso!</h3>
-            <p><strong>Nome:</strong> {eventoSalvo.nome}</p>
-            <p><strong>Data:</strong> {eventoSalvo.data}</p>
-            <p><strong>Local:</strong> {eventoSalvo.local}</p>
-            <button className="modal-close" onClick={() => setShowModal(false)}>Fechar</button>
-          </div>
+      {/* --- ALERTA PEQUENO --- */}
+      {alertVisible && eventoSalvo && (
+        <div className="alert-modal">
+          <h3>Evento cadastrado!</h3>
+          <p><strong>{eventoSalvo.nome}</strong> foi salvo com sucesso.</p>
+
         </div>
       )}
     </div>

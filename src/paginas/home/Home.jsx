@@ -1,5 +1,5 @@
-import Carrosel from "../componentes/Carrosel";
-import Evento from "../evento/Evento";
+import Carrosel from "../../componentes/Carrosel";
+import Evento from "../../evento/Evento";
 import "./home.css";
 
 function Home({ eventos }) {
@@ -9,14 +9,12 @@ function Home({ eventos }) {
       <h2>Aqui você fica por dentro dos eventos</h2>
       <h2>Eventos cadastrados:</h2>
 
-      {/* Container horizontal para os eventos */}
       <div className="eventos-container">
         <Evento nome="Aniversario" data="25/12/2025" local="casa" />
         <Evento nome="Mundo SENAI" data="15/11/2025" local="Auditório" />
         <Evento nome="Férias" data="12/12/2025" local="casa" />
       </div>
 
-      {/* Eventos dinâmicos */}
       {eventos && eventos.length > 0 && (
         <>
           <h3>Eventos adicionados pelo usuário:</h3>
@@ -33,8 +31,11 @@ function Home({ eventos }) {
         </>
       )}
 
-      {/* Carrossel vem depois dos eventos */}
-      <Carrosel />
+      {/* Carrossel ocupando a área inteira */}
+      <section className="area-carrossel">
+        <Carrosel />
+      </section>
+
     </main>
   );
 }

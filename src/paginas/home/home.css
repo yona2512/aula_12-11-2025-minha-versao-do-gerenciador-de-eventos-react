@@ -40,35 +40,7 @@
       overflow-x: hidden; /* evita scroll lateral */
     }
 
-    .faixa-imagens {
-        width: 100%;
-        overflow: hidden;
-        height: 400px;
-        margin-top: 20px;
-        position: relative;
     
-      }
       
-      .container-imagens {
-        display: flex;
-        animation: deslizar 60s linear infinite;
-      }
-      
-      .container-imagens img {
-        height: 250px;
-        margin-right: 20px;
-        flex-shrink: 0;
-        border-radius: 10px;
-        border: 7px solid rgb(255, 252, 252);
-      }
-      
-      @keyframes deslizar {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-50%);
-        }
-      }
 
       

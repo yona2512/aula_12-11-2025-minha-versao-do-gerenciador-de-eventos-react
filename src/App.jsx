@@ -1,27 +1,63 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
-import Home from "./paginas/Home";
+import Home from "./paginas/home/Home";
 import Sobre from "./paginas/Sobre";
+import CadastroEvento from "./paginas/cadastros/CadastroEvento";
+
 import "./styles.css";
 import "./Header/header.css";
 import "./Footer/footer.css";
-import "./paginas/cadastroEventos.css";   // ajuste conforme o nome real
+import "./paginas/cadastros/cadastroEventos.css";
 
+import Login from "./paginas/Login";
 
-import CadastroEvento from "./paginas/CadastroEvento";
 
 function App() {
+  const [eventos, setEventos] = useState([]);
+  const [logado, setLogado] = useState(false);
+
+  function handleCadastrarEvento(novoEvento) {
+    setEventos([...eventos, novoEvento]);
+  }
+
+  function handleLogout() {
+    setLogado(false);   
+  }
+
   return (
     <Router>
       <div className="app">
-        <Header />   {/* 1 - Header */}
+        {logado && <Header onLogout={handleLogout} />} 
+
         <Routes>
-          <Route path="/" element={<Home />} /> 
-          <Route path="/sobre" element={<Sobre />} /> 
-          <Route path="/CadastroEvento" element={<CadastroEvento />} /> 
+          <Route path="/" element={<Login setLogado={setLogado} />} />
+
+          <Route
+            path="/home"
+            element={logado ? <Home eventos={eventos} /> : <Navigate to="/" />}
+          />
+
+          <Route
+            path="/sobre"
+            element={logado ? <Sobre /> : <Navigate to="/" />}
+          />
+
+          <Route
+            path="/CadastroEvento"
+            element={
+              logado ? (
+                <CadastroEvento onCadastrar={handleCadastrarEvento} />
+              ) : (
+                <Navigate to="/" />
+              )
+            }
+          />
         </Routes>
-        <Footer />   {/* 4 - Footer */}
+
+        {logado && <Footer />}
       </div>
     </Router>
   );
